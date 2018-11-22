@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF12DB5121A68493003032BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB5021A68493003032BC /* AppDelegate.swift */; };
+		BF12DB5321A68493003032BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB5221A68493003032BC /* ViewController.swift */; };
+		BF12DB5621A68493003032BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF12DB5421A68493003032BC /* Main.storyboard */; };
+		BF12DB5921A68493003032BC /* GU_Memory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB5721A68493003032BC /* GU_Memory.xcdatamodeld */; };
+		BF12DB5B21A68496003032BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF12DB5A21A68496003032BC /* Assets.xcassets */; };
+		BF12DB5E21A68496003032BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF12DB5C21A68496003032BC /* LaunchScreen.storyboard */; };
+		BF12DB6921A68496003032BC /* GU_MemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB6821A68496003032BC /* GU_MemoryTests.swift */; };
+		BF12DB7421A68496003032BC /* GU_MemoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB7321A68496003032BC /* GU_MemoryUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF12DB6521A68496003032BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF12DB4521A68493003032BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF12DB4C21A68493003032BC;
+			remoteInfo = "GU Memory";
+		};
+		BF12DB7021A68496003032BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF12DB4521A68493003032BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF12DB4C21A68493003032BC;
+			remoteInfo = "GU Memory";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF12DB4D21A68493003032BC /* GU Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GU Memory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF12DB5021A68493003032BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF12DB5221A68493003032BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF12DB5521A68493003032BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF12DB5821A68493003032BC /* GU_Memory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GU_Memory.xcdatamodel; sourceTree = "<group>"; };
+		BF12DB5A21A68496003032BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF12DB5D21A68496003032BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF12DB5F21A68496003032BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF12DB6421A68496003032BC /* GU MemoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GU MemoryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF12DB6821A68496003032BC /* GU_MemoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GU_MemoryTests.swift; sourceTree = "<group>"; };
+		BF12DB6A21A68496003032BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF12DB6F21A68496003032BC /* GU MemoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GU MemoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF12DB7321A68496003032BC /* GU_MemoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GU_MemoryUITests.swift; sourceTree = "<group>"; };
+		BF12DB7521A68496003032BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF12DB4A21A68493003032BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF12DB6121A68496003032BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF12DB6C21A68496003032BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF12DB4421A68493003032BC = {
+			isa = PBXGroup;
+			children = (
+				BF12DB4F21A68493003032BC /* GU Memory */,
+				BF12DB6721A68496003032BC /* GU MemoryTests */,
+				BF12DB7221A68496003032BC /* GU MemoryUITests */,
+				BF12DB4E21A68493003032BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF12DB4E21A68493003032BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF12DB4D21A68493003032BC /* GU Memory.app */,
+				BF12DB6421A68496003032BC /* GU MemoryTests.xctest */,
+				BF12DB6F21A68496003032BC /* GU MemoryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF12DB4F21A68493003032BC /* GU Memory */ = {
+			isa = PBXGroup;
+			children = (
+				BF12DB5021A68493003032BC /* AppDelegate.swift */,
+				BF12DB5221A68493003032BC /* ViewController.swift */,
+				BF12DB5421A68493003032BC /* Main.storyboard */,
+				BF12DB5A21A68496003032BC /* Assets.xcassets */,
+				BF12DB5C21A68496003032BC /* LaunchScreen.storyboard */,
+				BF12DB5F21A68496003032BC /* Info.plist */,
+				BF12DB5721A68493003032BC /* GU_Memory.xcdatamodeld */,
+			);
+			path = "GU Memory";
+			sourceTree = "<group>";
+		};
+		BF12DB6721A68496003032BC /* GU MemoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF12DB6821A68496003032BC /* GU_MemoryTests.swift */,
+				BF12DB6A21A68496003032BC /* Info.plist */,
+			);
+			path = "GU MemoryTests";
+			sourceTree = "<group>";
+		};
+		BF12DB7221A68496003032BC /* GU MemoryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF12DB7321A68496003032BC /* GU_MemoryUITests.swift */,
+				BF12DB7521A68496003032BC /* Info.plist */,
+			);
+			path = "GU MemoryUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF12DB4C21A68493003032BC /* GU Memory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF12DB7821A68496003032BC /* Build configuration list for PBXNativeTarget "GU Memory" */;
+			buildPhases = (
+				BF12DB4921A68493003032BC /* Sources */,
+				BF12DB4A21A68493003032BC /* Frameworks */,
+				BF12DB4B21A68493003032BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GU Memory";
+			productName = "GU Memory";
+			productReference = BF12DB4D21A68493003032BC /* GU Memory.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF12DB6321A68496003032BC /* GU MemoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF12DB7B21A68496003032BC /* Build configuration list for PBXNativeTarget "GU MemoryTests" */;
+			buildPhases = (
+				BF12DB6021A68496003032BC /* Sources */,
+				BF12DB6121A68496003032BC /* Frameworks */,
+				BF12DB6221A68496003032BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF12DB6621A68496003032BC /* PBXTargetDependency */,
+			);
+			name = "GU MemoryTests";
+			productName = "GU MemoryTests";
+			productReference = BF12DB6421A68496003032BC /* GU MemoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF12DB6E21A68496003032BC /* GU MemoryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF12DB7E21A68496003032BC /* Build configuration list for PBXNativeTarget "GU MemoryUITests" */;
+			buildPhases = (
+				BF12DB6B21A68496003032BC /* Sources */,
+				BF12DB6C21A68496003032BC /* Frameworks */,
+				BF12DB6D21A68496003032BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF12DB7121A68496003032BC /* PBXTargetDependency */,
+			);
+			name = "GU MemoryUITests";
+			productName = "GU MemoryUITests";
+			productReference = BF12DB6F21A68496003032BC /* GU MemoryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF12DB4521A68493003032BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Sammy;
+				TargetAttributes = {
+					BF12DB4C21A68493003032BC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BF12DB6321A68496003032BC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BF12DB4C21A68493003032BC;
+					};
+					BF12DB6E21A68496003032BC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BF12DB4C21A68493003032BC;
+					};
+				};
+			};
+			buildConfigurationList = BF12DB4821A68493003032BC /* Build configuration list for PBXProject "GU Memory" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF12DB4421A68493003032BC;
+			productRefGroup = BF12DB4E21A68493003032BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF12DB4C21A68493003032BC /* GU Memory */,
+				BF12DB6321A68496003032BC /* GU MemoryTests */,
+				BF12DB6E21A68496003032BC /* GU MemoryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF12DB4B21A68493003032BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF12DB5E21A68496003032BC /* LaunchScreen.storyboard in Resources */,
+				BF12DB5B21A68496003032BC /* Assets.xcassets in Resources */,
+				BF12DB5621A68493003032BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF12DB6221A68496003032BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF12DB6D21A68496003032BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF12DB4921A68493003032BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF12DB5321A68493003032BC /* ViewController.swift in Sources */,
+				BF12DB5121A68493003032BC /* AppDelegate.swift in Sources */,
+				BF12DB5921A68493003032BC /* GU_Memory.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF12DB6021A68496003032BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF12DB6921A68496003032BC /* GU_MemoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF12DB6B21A68496003032BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF12DB7421A68496003032BC /* GU_MemoryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF12DB6621A68496003032BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF12DB4C21A68493003032BC /* GU Memory */;
+			targetProxy = BF12DB6521A68496003032BC /* PBXContainerItemProxy */;
+		};
+		BF12DB7121A68496003032BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF12DB4C21A68493003032BC /* GU Memory */;
+			targetProxy = BF12DB7021A68496003032BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF12DB5421A68493003032BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF12DB5521A68493003032BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF12DB5C21A68496003032BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF12DB5D21A68496003032BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF12DB7621A68496003032BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF12DB7721A68496003032BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF12DB7921A68496003032BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUYPJD4NUE;
+				INFOPLIST_FILE = "GU Memory/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sammyvowles.GU-Memory";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF12DB7A21A68496003032BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUYPJD4NUE;
+				INFOPLIST_FILE = "GU Memory/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sammyvowles.GU-Memory";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF12DB7C21A68496003032BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUYPJD4NUE;
+				INFOPLIST_FILE = "GU MemoryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sammyvowles.GU-MemoryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GU Memory.app/GU Memory";
+			};
+			name = Debug;
+		};
+		BF12DB7D21A68496003032BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUYPJD4NUE;
+				INFOPLIST_FILE = "GU MemoryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sammyvowles.GU-MemoryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GU Memory.app/GU Memory";
+			};
+			name = Release;
+		};
+		BF12DB7F21A68496003032BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUYPJD4NUE;
+				INFOPLIST_FILE = "GU MemoryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sammyvowles.GU-MemoryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GU Memory";
+			};
+			name = Debug;
+		};
+		BF12DB8021A68496003032BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUYPJD4NUE;
+				INFOPLIST_FILE = "GU MemoryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sammyvowles.GU-MemoryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GU Memory";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF12DB4821A68493003032BC /* Build configuration list for PBXProject "GU Memory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF12DB7621A68496003032BC /* Debug */,
+				BF12DB7721A68496003032BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF12DB7821A68496003032BC /* Build configuration list for PBXNativeTarget "GU Memory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF12DB7921A68496003032BC /* Debug */,
+				BF12DB7A21A68496003032BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF12DB7B21A68496003032BC /* Build configuration list for PBXNativeTarget "GU MemoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF12DB7C21A68496003032BC /* Debug */,
+				BF12DB7D21A68496003032BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF12DB7E21A68496003032BC /* Build configuration list for PBXNativeTarget "GU MemoryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF12DB7F21A68496003032BC /* Debug */,
+				BF12DB8021A68496003032BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF12DB5721A68493003032BC /* GU_Memory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF12DB5821A68493003032BC /* GU_Memory.xcdatamodel */,
+			);
+			currentVersion = BF12DB5821A68493003032BC /* GU_Memory.xcdatamodel */;
+			path = GU_Memory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BF12DB4521A68493003032BC /* Project object */;
+}
