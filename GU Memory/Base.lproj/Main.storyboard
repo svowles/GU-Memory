@@ -10,19 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="pR1-Ke-bxM">
-            <objects>
-                <navigationController id="Hjf-NS-CV3" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xOl-EJ-dN9">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eWh-67-6lu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1117" y="-131"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -250,20 +237,175 @@
             </objects>
             <point key="canvasLocation" x="1212" y="1088"/>
         </scene>
-        <!--Easy Game View Controller-->
+        <!--Let's Play!-->
         <scene sceneID="ZhO-IS-t3R">
             <objects>
                 <viewController id="6l0-RS-WGG" customClass="EasyGameViewController" customModule="GU_Memory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svh-H6-K60">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="weZ-Zo-Nk7">
+                                <rect key="frame" x="30" y="94" width="315" height="543"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="126" translatesAutoresizingMaskIntoConstraints="NO" id="LYN-PD-l6K">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="92.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Score:  0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7F-Fe-O3q">
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="92.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iI-Ad-sR1">
+                                                <rect key="frame" x="261" y="0.0" width="14" height="92.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="P7F-Fe-O3q" firstAttribute="top" secondItem="LYN-PD-l6K" secondAttribute="top" id="Kpi-gt-zVe"/>
+                                            <constraint firstAttribute="trailing" secondItem="6iI-Ad-sR1" secondAttribute="trailing" constant="20" id="YZK-N6-Bn7"/>
+                                            <constraint firstItem="P7F-Fe-O3q" firstAttribute="leading" secondItem="LYN-PD-l6K" secondAttribute="leading" id="pEi-ni-dG0"/>
+                                            <constraint firstItem="6iI-Ad-sR1" firstAttribute="top" secondItem="LYN-PD-l6K" secondAttribute="top" id="qM6-U0-ALR"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="zHD-pB-Rx9">
+                                        <rect key="frame" x="0.0" y="112.5" width="299" height="92.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ony-94-zac">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="92.5"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButtonSelectedWithSender:" destination="6l0-RS-WGG" eventType="touchUpInside" id="pSg-aa-Uzj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRP-Pi-Dou">
+                                                <rect key="frame" x="184" y="0.0" width="115" height="92.5"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButtonSelectedWithSender:" destination="6l0-RS-WGG" eventType="touchUpInside" id="0Xt-U8-aui"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="63u-9D-c23">
+                                        <rect key="frame" x="0.0" y="225" width="299" height="93"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMJ-av-zbk">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="93"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButtonSelectedWithSender:" destination="6l0-RS-WGG" eventType="touchUpInside" id="DX2-nQ-gJc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vV4-Fc-FlA">
+                                                <rect key="frame" x="184" y="0.0" width="115" height="93"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButtonSelectedWithSender:" destination="6l0-RS-WGG" eventType="touchUpInside" id="8cV-7r-EbZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="Rre-Bm-eSD">
+                                        <rect key="frame" x="0.0" y="338" width="299" height="92.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6p-lS-xyu">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="92.5"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButtonSelectedWithSender:" destination="6l0-RS-WGG" eventType="touchUpInside" id="skz-R2-QDr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4S-oS-sD3">
+                                                <rect key="frame" x="184" y="0.0" width="115" height="92.5"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButtonSelectedWithSender:" destination="6l0-RS-WGG" eventType="touchUpInside" id="HdG-i5-l4f"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="Uti-MN-zhy">
+                                        <rect key="frame" x="0.0" y="450.5" width="299" height="92.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJ5-g2-Rbk">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="92.5"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButtonSelectedWithSender:" destination="6l0-RS-WGG" eventType="touchUpInside" id="feN-BO-Jbc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjG-x2-prN">
+                                                <rect key="frame" x="184" y="0.0" width="115" height="92.5"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButtonSelectedWithSender:" destination="6l0-RS-WGG" eventType="touchUpInside" id="3RT-G4-5Cz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="63u-9D-c23" secondAttribute="trailing" constant="16" id="13x-bk-ZR6"/>
+                                    <constraint firstAttribute="trailing" secondItem="LYN-PD-l6K" secondAttribute="trailing" constant="40" id="5DF-rN-u5q"/>
+                                    <constraint firstItem="LYN-PD-l6K" firstAttribute="top" secondItem="weZ-Zo-Nk7" secondAttribute="top" id="Kzi-bn-Ec0"/>
+                                    <constraint firstAttribute="trailing" secondItem="zHD-pB-Rx9" secondAttribute="trailing" constant="16" id="XbL-bT-Exn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rre-Bm-eSD" secondAttribute="trailing" constant="16" id="nlC-P9-wWA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uti-MN-zhy" secondAttribute="trailing" constant="16" id="xBP-qg-Sld"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.51399028560000004" green="0.73049911919999999" blue="0.87828528969999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="PYq-qV-MUq" firstAttribute="trailing" secondItem="weZ-Zo-Nk7" secondAttribute="trailing" constant="30" id="9c7-iL-bfy"/>
+                            <constraint firstItem="PYq-qV-MUq" firstAttribute="bottom" secondItem="weZ-Zo-Nk7" secondAttribute="bottom" constant="30" id="LOF-AX-pHQ"/>
+                            <constraint firstItem="weZ-Zo-Nk7" firstAttribute="top" secondItem="PYq-qV-MUq" secondAttribute="top" constant="30" id="Xcs-Tq-5kM"/>
+                            <constraint firstItem="weZ-Zo-Nk7" firstAttribute="leading" secondItem="PYq-qV-MUq" secondAttribute="leading" constant="30" id="cXg-mK-1HX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PYq-qV-MUq"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Let's Play!" id="G9O-tf-raB"/>
+                    <connections>
+                        <outlet property="card0Button" destination="ony-94-zac" id="L3q-81-p2u"/>
+                        <outlet property="card1Button" destination="KRP-Pi-Dou" id="vgY-6E-6po"/>
+                        <outlet property="card2Button" destination="fMJ-av-zbk" id="oy5-jb-VjW"/>
+                        <outlet property="card3Button" destination="vV4-Fc-FlA" id="Jh5-pk-jQB"/>
+                        <outlet property="card4Button" destination="K6p-lS-xyu" id="ebh-xp-XCG"/>
+                        <outlet property="card5Button" destination="a4S-oS-sD3" id="MEg-EJ-1Fp"/>
+                        <outlet property="card6Button" destination="vJ5-g2-Rbk" id="OPw-ce-Deg"/>
+                        <outlet property="card7Button" destination="zjG-x2-prN" id="cpb-Hg-33D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pA1-BZ-qrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2310" y="1096"/>
+            <point key="canvasLocation" x="2309.5999999999999" y="1095.2023988005999"/>
         </scene>
         <!--Hard Game View Controller-->
         <scene sceneID="QAy-cn-ReT">

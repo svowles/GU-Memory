@@ -20,6 +20,7 @@
 		BF12DB8621A6968F003032BC /* MediumGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB8521A6968F003032BC /* MediumGameViewController.swift */; };
 		BF12DB8821A696A2003032BC /* HardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB8721A696A2003032BC /* HardGameViewController.swift */; };
 		BF12DB8A21A6971A003032BC /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB8921A6971A003032BC /* AchievementsViewController.swift */; };
+		BF53C37D21A7537100CFAC35 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53C37C21A7537100CFAC35 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		BF12DB8521A6968F003032BC /* MediumGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumGameViewController.swift; sourceTree = "<group>"; };
 		BF12DB8721A696A2003032BC /* HardGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardGameViewController.swift; sourceTree = "<group>"; };
 		BF12DB8921A6971A003032BC /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
+		BF53C37C21A7537100CFAC35 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				BF12DB5021A68493003032BC /* AppDelegate.swift */,
 				BF12DB5221A68493003032BC /* ViewController.swift */,
 				BF12DB5421A68493003032BC /* Main.storyboard */,
+				BF53C37C21A7537100CFAC35 /* Card.swift */,
 				BF12DB8321A6967E003032BC /* EasyGameViewController.swift */,
 				BF12DB8521A6968F003032BC /* MediumGameViewController.swift */,
 				BF12DB8721A696A2003032BC /* HardGameViewController.swift */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF12DB5321A68493003032BC /* ViewController.swift in Sources */,
+				BF53C37D21A7537100CFAC35 /* Card.swift in Sources */,
 				BF12DB8621A6968F003032BC /* MediumGameViewController.swift in Sources */,
 				BF12DB8821A696A2003032BC /* HardGameViewController.swift in Sources */,
 				BF12DB5121A68493003032BC /* AppDelegate.swift in Sources */,
