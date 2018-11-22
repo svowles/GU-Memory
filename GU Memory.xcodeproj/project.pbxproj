@@ -15,6 +15,11 @@
 		BF12DB5E21A68496003032BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF12DB5C21A68496003032BC /* LaunchScreen.storyboard */; };
 		BF12DB6921A68496003032BC /* GU_MemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB6821A68496003032BC /* GU_MemoryTests.swift */; };
 		BF12DB7421A68496003032BC /* GU_MemoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB7321A68496003032BC /* GU_MemoryUITests.swift */; };
+		BF12DB8221A68C24003032BC /* LevelSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB8121A68C24003032BC /* LevelSelectionViewController.swift */; };
+		BF12DB8421A6967E003032BC /* EasyGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB8321A6967E003032BC /* EasyGameViewController.swift */; };
+		BF12DB8621A6968F003032BC /* MediumGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB8521A6968F003032BC /* MediumGameViewController.swift */; };
+		BF12DB8821A696A2003032BC /* HardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB8721A696A2003032BC /* HardGameViewController.swift */; };
+		BF12DB8A21A6971A003032BC /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12DB8921A6971A003032BC /* AchievementsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		BF12DB6F21A68496003032BC /* GU MemoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GU MemoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF12DB7321A68496003032BC /* GU_MemoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GU_MemoryUITests.swift; sourceTree = "<group>"; };
 		BF12DB7521A68496003032BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF12DB8121A68C24003032BC /* LevelSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionViewController.swift; sourceTree = "<group>"; };
+		BF12DB8321A6967E003032BC /* EasyGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGameViewController.swift; sourceTree = "<group>"; };
+		BF12DB8521A6968F003032BC /* MediumGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumGameViewController.swift; sourceTree = "<group>"; };
+		BF12DB8721A696A2003032BC /* HardGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardGameViewController.swift; sourceTree = "<group>"; };
+		BF12DB8921A6971A003032BC /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,11 @@
 				BF12DB5021A68493003032BC /* AppDelegate.swift */,
 				BF12DB5221A68493003032BC /* ViewController.swift */,
 				BF12DB5421A68493003032BC /* Main.storyboard */,
+				BF12DB8321A6967E003032BC /* EasyGameViewController.swift */,
+				BF12DB8521A6968F003032BC /* MediumGameViewController.swift */,
+				BF12DB8721A696A2003032BC /* HardGameViewController.swift */,
+				BF12DB8921A6971A003032BC /* AchievementsViewController.swift */,
+				BF12DB8121A68C24003032BC /* LevelSelectionViewController.swift */,
 				BF12DB5A21A68496003032BC /* Assets.xcassets */,
 				BF12DB5C21A68496003032BC /* LaunchScreen.storyboard */,
 				BF12DB5F21A68496003032BC /* Info.plist */,
@@ -260,7 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF12DB5321A68493003032BC /* ViewController.swift in Sources */,
+				BF12DB8621A6968F003032BC /* MediumGameViewController.swift in Sources */,
+				BF12DB8821A696A2003032BC /* HardGameViewController.swift in Sources */,
 				BF12DB5121A68493003032BC /* AppDelegate.swift in Sources */,
+				BF12DB8A21A6971A003032BC /* AchievementsViewController.swift in Sources */,
+				BF12DB8421A6967E003032BC /* EasyGameViewController.swift in Sources */,
+				BF12DB8221A68C24003032BC /* LevelSelectionViewController.swift in Sources */,
 				BF12DB5921A68493003032BC /* GU_Memory.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,12 +9,38 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var guMemoryLabel: UILabel!
+    
+    @IBOutlet var playButton: UIButton!
+    
+    @IBOutlet var achievementsButton: UIButton!
 
+    @IBAction func playButtonSelected(sender: UIButton){
+        print("play button selected")
+    }
+    
+    @IBAction func achievementsButtonSelected(sender: UIButton){
+        print("achievements button selected")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "Level Selection Segue" {
+                
+                
+            }
+            
+        }
+    }
+    
+    
 
 }
 
