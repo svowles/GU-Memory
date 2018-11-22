@@ -13,13 +13,13 @@
         <!--Navigation Controller-->
         <scene sceneID="pR1-Ke-bxM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eWh-67-6lu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Hjf-NS-CV3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xOl-EJ-dN9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWh-67-6lu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1117" y="-131"/>
         </scene>
@@ -81,6 +81,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="achievementsButtonSelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cW0-mi-oqn"/>
+                                                    <segue destination="ds1-QI-8lk" kind="show" identifier="Achievements Segue" id="mnP-tK-fPt"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -117,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="109.29535232383809"/>
+            <point key="canvasLocation" x="1218" y="109"/>
         </scene>
         <!--Level Selection View Controller-->
         <scene sceneID="V8z-vr-17n">
@@ -147,7 +148,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="e75-qV-Iyj" kind="show" identifier="Hard Game Segue" id="x23-3d-waX"/>
+                                                    <segue destination="6l0-RS-WGG" kind="show" identifier="Easy Level Segue" id="K5p-39-tMU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpS-bf-aKi">
@@ -158,7 +159,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="6l0-RS-WGG" kind="show" identifier="Easy Game Segue" id="BSn-ZX-X9R"/>
+                                                    <segue destination="92l-qv-L4d" kind="show" identifier="Medium Level Segue" id="GbB-Zl-MTc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-nY-yLL">
@@ -169,7 +170,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="92l-qv-L4d" kind="show" identifier="Meduim Game Segue" id="kFd-L5-Z8Q"/>
+                                                    <segue destination="e75-qV-Iyj" kind="show" identifier="Hard Level Segue" id="V7S-W4-R2b"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -198,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oG2-S4-Cch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2128.8000000000002" y="108.39580209895054"/>
+            <point key="canvasLocation" x="3190" y="109"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qb8-BR-gwI">
@@ -218,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="240.80000000000001" y="109.29535232383809"/>
         </scene>
-        <!--View Controller-->
+        <!--Medium Game View Controller-->
         <scene sceneID="ISI-GC-INM">
             <objects>
-                <viewController id="92l-qv-L4d" sceneMemberID="viewController">
+                <viewController id="92l-qv-L4d" customClass="MediumGameViewController" customModule="GU_Memory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lxQ-kM-xP6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,12 +232,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WtB-tl-5fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="1095"/>
+            <point key="canvasLocation" x="3190" y="1095"/>
         </scene>
-        <!--View Controller-->
+        <!--Achievements-->
+        <scene sceneID="dmd-1x-5SW">
+            <objects>
+                <viewController id="ds1-QI-8lk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gr5-04-afq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="m5o-0f-WfH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Achievements" id="4ZH-Lg-Sbn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Dt-cd-Mum" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="1088"/>
+        </scene>
+        <!--Easy Game View Controller-->
         <scene sceneID="ZhO-IS-t3R">
             <objects>
-                <viewController id="6l0-RS-WGG" sceneMemberID="viewController">
+                <viewController id="6l0-RS-WGG" customClass="EasyGameViewController" customModule="GU_Memory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svh-H6-K60">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,12 +263,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pA1-BZ-qrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="1096"/>
+            <point key="canvasLocation" x="2310" y="1096"/>
         </scene>
-        <!--View Controller-->
+        <!--Hard Game View Controller-->
         <scene sceneID="QAy-cn-ReT">
             <objects>
-                <viewController id="e75-qV-Iyj" sceneMemberID="viewController">
+                <viewController id="e75-qV-Iyj" customClass="HardGameViewController" customModule="GU_Memory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jYp-ij-BW3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvr-al-ggy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3012" y="1095"/>
+            <point key="canvasLocation" x="4073" y="1095"/>
         </scene>
     </scenes>
 </document>
