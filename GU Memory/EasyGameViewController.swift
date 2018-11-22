@@ -10,6 +10,10 @@ import UIKit
 
 class EasyGameViewController: UIViewController {
     
+    var cards = [Card]()
+    
+    var numOfAttempts = 0
+    
     @IBOutlet var card0Button: UIButton!
     
     @IBOutlet var card1Button: UIButton!
@@ -26,7 +30,6 @@ class EasyGameViewController: UIViewController {
     
     @IBOutlet var card7Button: UIButton!
     
-    
     @IBAction func cardButtonSelected(sender: UIButton){
         
         print("button selected: \(sender.tag)")
@@ -36,7 +39,16 @@ class EasyGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //create 8 new cards
+        for i in 0..<8 {
+            let c = Card(frontImage: "", backImage: "")
+            cards.append(c)
+        }
         
+        
+        
+        
+        //randomly assign cards with images
 
         // Do any additional setup after loading the view.
     }

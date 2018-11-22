@@ -17,6 +17,11 @@ struct Card {
     var isMatched = false
     var displayedImage = ""
     
+    init(frontImage:String, backImage:String) {
+        self.frontImage = frontImage
+        self.backImage = backImage
+    }
+    
     mutating func flipCard(){
         if self.displayedImage == self.frontImage {
             self.displayedImage = backImage
