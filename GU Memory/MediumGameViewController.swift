@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class MediumGameViewController: UIViewController {
 
@@ -46,6 +47,22 @@ class MediumGameViewController: UIViewController {
     
     @IBOutlet var card7Button: UIButton!
     
+    @IBOutlet var card8Button: UIButton!
+    
+    @IBOutlet var card9Button: UIButton!
+    
+    @IBOutlet var card10Button: UIButton!
+    
+    @IBOutlet var card11Button: UIButton!
+    
+    @IBOutlet var card12Button: UIButton!
+    
+    @IBOutlet var card13Button: UIButton!
+    
+    @IBOutlet var card14Button: UIButton!
+    
+    @IBOutlet var card15Button: UIButton!
+    
     var buttons = [UIButton]()
     
     /**
@@ -63,7 +80,7 @@ class MediumGameViewController: UIViewController {
         sender.backgroundImage(for: .normal)
         sender.setBackgroundImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
         
-        sender.setImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
+        //sender.setImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
         sender.isEnabled = false
         //sender.backgroundImage(for: .normal)
         
@@ -221,17 +238,21 @@ class MediumGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //create 8 new cards
-        for i in 0..<8 {
+        //create 16 new cards
+        for i in 0..<16 {
             let c = Card(frontImage: "", backImage: "")
             cards.append(c)
         }
+        print("created cards")
+        
         setCardImage()
+        
+        print("set images")
         //randomly assign cards with images
         
         // Do any additional setup after loading the view.
         
-        buttons = [card0Button, card1Button, card2Button, card3Button, card4Button, card5Button, card6Button, card7Button]
+        buttons = [card0Button, card1Button, card2Button, card3Button, card4Button, card5Button, card6Button, card7Button, card8Button, card9Button, card10Button, card11Button, card12Button, card13Button, card14Button, card15Button]
         
         
         //authenticate user in game center
@@ -329,6 +350,8 @@ class MediumGameViewController: UIViewController {
             buttons[i].backgroundImage(for: .normal)
             
             buttons[i].setBackgroundImage(UIImage(named: cards[i].flipCard()), for: .normal)
+            
+            buttons[i].backgroundColor = backColor!
         }
         
         
@@ -350,7 +373,7 @@ class MediumGameViewController: UIViewController {
                     self.backColor!
                 buttons[i].setBackgroundImage(UIImage(named: cards[i].displayedImage), for: .normal)
                 
-                //buttons[i].backgroundColor = UIColor(named: "red")
+                buttons[i].backgroundColor = backColor!
                 print("red")
                 
             }

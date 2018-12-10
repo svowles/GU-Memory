@@ -56,15 +56,14 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
         print(cards[sender.tag].backImage)
         
         backColor = sender.backgroundColor
+    
         
-        
-        
-        print("background color: \(sender.backgroundColor)")
+        print("background color: \(sender.backgroundColor!)")
         sender.backgroundColor = UIColor(named: "white")
         sender.backgroundImage(for: .normal)
         sender.setBackgroundImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
         
-        sender.setImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
+        //sender.setImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
         sender.isEnabled = false
         //sender.backgroundImage(for: .normal)
         
@@ -74,6 +73,8 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
         print("button selected: \(sender.tag)")
         
         let checkCards = checkForTwoCards()
+        print("CHECK CARDS RESULT:  \(checkCards)")
+        
         if checkCards.found{
             
             //add to attempts variable
@@ -99,7 +100,7 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
                 
                 print("timer starting")
                 timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: {(timer) -> Void in
-                    /*
+                    
                     var sendImage = self.cards[sender.tag].flipCard()
                     var prevImage = self.cards[self.prevButton.tag].flipCard()
                     
@@ -109,7 +110,7 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
                     sender.setBackgroundImage(UIImage(named: sendImage), for: .normal)
                     self.prevButton.setBackgroundImage(UIImage(named: prevImage), for: .normal)
                     
-                    */
+ 
                     sender.isEnabled = true
                     self.prevButton.isEnabled = true
                     
@@ -205,12 +206,15 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
      checks to see if two cards are currently flipped. returns true or false if flipped and indexes of the two flipped cards
      */
     func checkForTwoCards() -> (found: Bool, indexes: [Int]){
+        print("CHECKING FOR 2 CARDS")
         var numFlippedCards = 0
         var indexFlipCards = [Int]()
         for i in 0..<cards.count{
+            print("CARD ")
             if cards[i].isFlipped && !cards[i].isMatched{
                 numFlippedCards += 1
                 indexFlipCards.append(i)
+                print("NUM FLIPPED CARDS: \(numFlippedCards)")
             }
             if numFlippedCards == 2{
                 return (true, indexFlipCards)
@@ -330,6 +334,11 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
             buttons[i].backgroundImage(for: .normal)
             
             buttons[i].setBackgroundImage(UIImage(named: cards[i].flipCard()), for: .normal)
+            
+            buttons[i].backgroundColor =
+                self.backColor!
+            
+            print("Setting color to \(backColor!)")
         }
         
         
@@ -349,6 +358,7 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
                 
                 buttons[i].backgroundColor =
                     self.backColor!
+                print("Setting color to \(backColor!)")
                 buttons[i].setBackgroundImage(UIImage(named: cards[i].displayedImage), for: .normal)
                 
                 //buttons[i].backgroundColor = UIColor(named: "red")
