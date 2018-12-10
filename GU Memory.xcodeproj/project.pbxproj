@@ -95,6 +95,7 @@
 				BF12DB6721A68496003032BC /* GU MemoryTests */,
 				BF12DB7221A68496003032BC /* GU MemoryUITests */,
 				BF12DB4E21A68493003032BC /* Products */,
+				BF8DA88A21BEF2190050C384 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +145,13 @@
 				BF12DB7521A68496003032BC /* Info.plist */,
 			);
 			path = "GU MemoryUITests";
+			sourceTree = "<group>";
+		};
+		BF8DA88A21BEF2190050C384 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +222,11 @@
 				TargetAttributes = {
 					BF12DB4C21A68493003032BC = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					BF12DB6321A68496003032BC = {
 						CreatedOnToolsVersion = 10.1;

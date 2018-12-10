@@ -9,7 +9,7 @@
 import UIKit
 import GameKit
 
-class EasyGameViewController: UIViewController, GKGameCenterControllerDelegate  {
+class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegate  {
     
     var cards = [Card]()
     
@@ -21,12 +21,15 @@ class EasyGameViewController: UIViewController, GKGameCenterControllerDelegate  
     
     @IBOutlet var scoreLabel: UILabel!
     
+    var timer: Timer? = nil
     
     var numOfAttempts = 0
     
     var numOfAttemptsLeft = 15
     
     var score = 0
+    
+    var backColor: UIColor? = nil
     
     @IBOutlet var card0Button: UIButton!
     
@@ -44,13 +47,30 @@ class EasyGameViewController: UIViewController, GKGameCenterControllerDelegate  
     
     @IBOutlet var card7Button: UIButton!
     
+    var buttons = [UIButton]()
+    
     /**
      action for if a button is clicked
      */
     @IBAction func cardButtonSelected(sender: UIButton){
         print(cards[sender.tag].backImage)
+        
+        backColor = sender.backgroundColor
+        
+        
+        
+        print("background color: \(sender.backgroundColor)")
+        sender.backgroundColor = UIColor(named: "white")
+        sender.backgroundImage(for: .normal)
         sender.setBackgroundImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
+        
+        sender.setImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
         sender.isEnabled = false
+        //sender.backgroundImage(for: .normal)
+        
+        //sender.adjustsImageWhenHighlighted = NO;
+        
+        
         print("button selected: \(sender.tag)")
         
         let checkCards = checkForTwoCards()
@@ -58,10 +78,65 @@ class EasyGameViewController: UIViewController, GKGameCenterControllerDelegate  
             
             //add to attempts variable
             if !checkForMatch(cardMatch: checkCards.indexes){
+                /*
+                
+                let alertControllerNotValidInput = UIAlertController(title: "Not A Match", message: nil, preferredStyle: .actionSheet)
+                
+                alertControllerNotValidInput.addAction(UIAlertAction(title: "Try again.", style: .default, handler: { (action) in
+                    sender.setBackgroundImage(UIImage(named: self.cards[sender.tag].flipCard()), for: .normal)
+                    self.prevButton.setBackgroundImage(UIImage(named: self.cards[self.prevButton.tag].flipCard()), for: .normal)
+                    sender.isEnabled = true
+                    self.prevButton.isEnabled = true
+                    
+                    print("turn 2 cards back over")
+                    
+                }))
+                
+                present(alertControllerNotValidInput, animated: true, completion: nil)
+                */
+                
+                self.disableAllButtons()
+                
+                print("timer starting")
+                timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: {(timer) -> Void in
+                    /*
+                    var sendImage = self.cards[sender.tag].flipCard()
+                    var prevImage = self.cards[self.prevButton.tag].flipCard()
+                    
+                    print("prevImage: \(prevImage)")
+                    print("sendImage: \(sendImage)")
+                    
+                    sender.setBackgroundImage(UIImage(named: sendImage), for: .normal)
+                    self.prevButton.setBackgroundImage(UIImage(named: prevImage), for: .normal)
+                    
+                    */
+                    sender.isEnabled = true
+                    self.prevButton.isEnabled = true
+                    
+                    print("turn 2 cards back over")
+                    
+                    self.turnOverAllNonMatches()
+                    
+                    self.enableAllNonMatches()
+                    
+                    print("timer ending")
+                    
+                    
+                    sender.backgroundColor = self.backColor!
+                    
+                    self.prevButton.backgroundColor = self.backColor!
+                    
+                })
+                /*
                 sender.setBackgroundImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
                 prevButton.setBackgroundImage(UIImage(named: cards[prevButton.tag].flipCard()), for: .normal)
                 sender.isEnabled = true
                 prevButton.isEnabled = true
+
+                print("turn 2 cards back over")
+ 
+                */
+                
             }
             else{
                 //add to score
@@ -104,7 +179,20 @@ class EasyGameViewController: UIViewController, GKGameCenterControllerDelegate  
             print("new score: \(score)")
             
             //check to see if game is over
-            
+            if isGameOver() {
+                print("GAME OVER")
+                
+                let alertControllerNotValidInput = UIAlertController(title: "GAME OVER", message: "You scored \(score) points.", preferredStyle: .alert)
+                
+                alertControllerNotValidInput.addAction(UIAlertAction(title: "New Game", style: .default, handler: { (action) in
+                        print("NEW GAME")
+                    self.newGame()
+                    
+                }))
+                
+                present(alertControllerNotValidInput, animated: true, completion: nil)
+                
+            }
             
             
             
@@ -144,9 +232,19 @@ class EasyGameViewController: UIViewController, GKGameCenterControllerDelegate  
         
         // Do any additional setup after loading the view.
         
+        buttons = [card0Button, card1Button, card2Button, card3Button, card4Button, card5Button, card6Button, card7Button]
+        
         
         //authenticate user in game center
         authenticateCurrentPlayer()
+        
+        
+        //show rules
+        let alertControllerNotValidInput = UIAlertController(title: "Game Rules", message: "Rules.", preferredStyle: .alert)
+        
+        alertControllerNotValidInput.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
+        
+        present(alertControllerNotValidInput, animated: true, completion: nil)
     }
     
     /**
@@ -212,6 +310,71 @@ class EasyGameViewController: UIViewController, GKGameCenterControllerDelegate  
                 print(GKLocalPlayer.local.isAuthenticated)
             }
         }
+    }
+    
+    func newGame(){
+        score = 0
+        numOfAttemptsLeft = 15
+        setCardImage()
+        
+        for i in 0..<cards.count {
+            cards[i].isMatched = false
+            //checkForMatch(cardMatch: <#T##[Int]#>)
+            
+            scoreLabel.text = "Score: \(score)"
+        }
+        
+        for i in 0..<buttons.count{
+            
+            buttons[i].isEnabled = true
+            buttons[i].backgroundImage(for: .normal)
+            
+            buttons[i].setBackgroundImage(UIImage(named: cards[i].flipCard()), for: .normal)
+        }
+        
+        
+    }
+    
+    func turnOverAllNonMatches(){
+        for i in 0..<cards.count {
+            
+            //if the card has been flipped over but does not have a match
+            if cards[i].isFlipped && !cards[i].isMatched {
+                //flip it back over
+                print("image before flipped: \(cards[i].displayedImage)")
+                
+                var imageAfterFlip = cards[i].flipCard()
+                
+                print("image after flipped: \(cards[i].displayedImage)")
+                
+                buttons[i].backgroundColor =
+                    self.backColor!
+                buttons[i].setBackgroundImage(UIImage(named: cards[i].displayedImage), for: .normal)
+                
+                //buttons[i].backgroundColor = UIColor(named: "red")
+                print("red")
+                
+            }
+            
+        }
+    }
+    
+    func disableAllButtons(){
+     
+        for i in 0..<buttons.count{
+            buttons[i].isEnabled = false
+        }
+        
+    }
+    
+    func enableAllNonMatches(){
+        
+        for i in 0..<cards.count{
+            if !cards[i].isMatched{
+                buttons[i].isEnabled = true
+            }
+        }
+        
     }
     
 }

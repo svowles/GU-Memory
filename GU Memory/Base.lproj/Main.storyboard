@@ -63,7 +63,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="aKa-AY-Ax1"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <state key="normal" title="View  Achievements">
+                                                <state key="normal" title="View  ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -426,10 +426,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="zHD-pB-Rx9">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="113"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ony-94-zac">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ony-94-zac">
                                                 <rect key="frame" x="0.0" y="0.0" width="123" height="113"/>
                                                 <color key="backgroundColor" red="0.87828528969999997" green="0.093310899500000002" blue="0.105448553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="0">
+                                                <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -439,7 +439,7 @@
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRP-Pi-Dou">
                                                 <rect key="frame" x="192" y="0.0" width="123" height="113"/>
                                                 <color key="backgroundColor" red="0.87828528969999997" green="0.093310899500000002" blue="0.105448553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="1">
+                                                <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -454,7 +454,7 @@
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMJ-av-zbk">
                                                 <rect key="frame" x="0.0" y="0.0" width="123" height="113"/>
                                                 <color key="backgroundColor" red="0.87828528969999997" green="0.093310899500000002" blue="0.105448553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="2">
+                                                <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -464,7 +464,7 @@
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vV4-Fc-FlA">
                                                 <rect key="frame" x="192" y="0.0" width="123" height="113"/>
                                                 <color key="backgroundColor" red="0.87828528969999997" green="0.093310899500000002" blue="0.105448553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="3">
+                                                <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -479,7 +479,7 @@
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6p-lS-xyu">
                                                 <rect key="frame" x="0.0" y="0.0" width="123" height="112.5"/>
                                                 <color key="backgroundColor" red="0.87828528969999997" green="0.093310899500000002" blue="0.105448553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="4">
+                                                <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -489,7 +489,7 @@
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4S-oS-sD3">
                                                 <rect key="frame" x="192" y="0.0" width="123" height="112.5"/>
                                                 <color key="backgroundColor" red="0.87828528969999997" green="0.093310899500000002" blue="0.105448553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="5">
+                                                <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -504,7 +504,7 @@
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJ5-g2-Rbk">
                                                 <rect key="frame" x="0.0" y="0.0" width="123" height="113"/>
                                                 <color key="backgroundColor" red="0.87828528969999997" green="0.093310899500000002" blue="0.105448553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="6">
+                                                <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -514,7 +514,7 @@
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjG-x2-prN">
                                                 <rect key="frame" x="192" y="0.0" width="123" height="113"/>
                                                 <color key="backgroundColor" red="0.87828528969999997" green="0.093310899500000002" blue="0.105448553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="7">
+                                                <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
