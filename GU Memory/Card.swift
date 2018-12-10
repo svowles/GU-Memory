@@ -22,12 +22,16 @@ struct Card {
         self.backImage = backImage
     }
     
-    mutating func flipCard(){
+    mutating func flipCard() -> String{
         if self.displayedImage == self.frontImage {
             self.displayedImage = backImage
+            self.isFlipped = true
+            return backImage
         }
         else{
             self.displayedImage = frontImage
+            self.isFlipped = false
+            return frontImage
         }
     }
 }
