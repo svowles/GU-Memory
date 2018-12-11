@@ -29,6 +29,10 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        playButton.layer.cornerRadius = 10
+        
+        guMemoryLabel.layer.cornerRadius = 10 
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

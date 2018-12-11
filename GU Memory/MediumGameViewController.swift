@@ -74,14 +74,28 @@ class MediumGameViewController: UIViewController {
         backColor = sender.backgroundColor
         
         
+        sender.backgroundColor = UIColor(named: "white")
+        sender.backgroundImage(for: .normal)
         
+        print("image after flipped: \(cards[sender.tag].displayedImage)")
+        
+        let imageAfterFlip = cards[sender.tag].flipCard()
+        
+        print("image after flipped: \(cards[sender.tag].displayedImage)")
+        
+        //buttons[i].backgroundColor = self.backColor!
+        print("Setting color to \(backColor!)")
+        sender.setBackgroundImage(UIImage(named: cards[sender.tag].displayedImage), for: .normal)
+        
+    /*
         //print("background color: \(sender.backgroundColor)")
         sender.backgroundColor = UIColor(named: "white")
         sender.backgroundImage(for: .normal)
         sender.setBackgroundImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
-        
+      */
         //sender.setImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
         sender.isEnabled = false
+        sender.adjustsImageWhenDisabled = false
         //sender.backgroundImage(for: .normal)
         
         //sender.adjustsImageWhenHighlighted = NO;
@@ -114,7 +128,7 @@ class MediumGameViewController: UIViewController {
                 self.disableAllButtons()
                 
                 print("timer starting")
-                timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: {(timer) -> Void in
+                timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: {(timer) -> Void in
                     /*
                      var sendImage = self.cards[sender.tag].flipCard()
                      var prevImage = self.cards[self.prevButton.tag].flipCard()
@@ -402,6 +416,7 @@ class MediumGameViewController: UIViewController {
         
         for i in 0..<buttons.count{
             buttons[i].isEnabled = false
+            buttons[i].adjustsImageWhenDisabled = false
         }
         
     }

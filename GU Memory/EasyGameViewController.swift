@@ -56,15 +56,34 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
         print(cards[sender.tag].backImage)
         
         backColor = sender.backgroundColor
+        
+        sender.backgroundColor = UIColor(named: "white")
+        sender.backgroundImage(for: .normal)
+        
+        print("image after flipped: \(cards[sender.tag].displayedImage)")
+        
+        let imageAfterFlip = cards[sender.tag].flipCard()
+         
+        print("image after flipped: \(cards[sender.tag].displayedImage)")
+         
+        //buttons[i].backgroundColor = self.backColor!
+        print("Setting color to \(backColor!)")
+        sender.setBackgroundImage(UIImage(named: cards[sender.tag].displayedImage), for: .normal)
+        
     
         
+    //*/
+    
+        /*
         print("background color: \(sender.backgroundColor!)")
         sender.backgroundColor = UIColor(named: "white")
         sender.backgroundImage(for: .normal)
-        sender.setBackgroundImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
-        
+        //sender.setBackgroundImage(UIImage(named: cards[sender.tag].displayedImage), for: .normal)
+        */
         //sender.setImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
         sender.isEnabled = false
+        sender.adjustsImageWhenDisabled = false
+        
         //sender.backgroundImage(for: .normal)
         
         //sender.adjustsImageWhenHighlighted = NO;
@@ -99,7 +118,7 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
                 self.disableAllButtons()
                 
                 print("timer starting")
-                timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: {(timer) -> Void in
+                timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: {(timer) -> Void in
                     
                     let sendImage = self.cards[sender.tag].flipCard()
                     let prevImage = self.cards[self.prevButton.tag].flipCard()
@@ -357,17 +376,21 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
             
             //if the card has been flipped over but does not have a match
             if cards[i].isFlipped && !cards[i].isMatched {
+                
                 //flip it back over
                 print("image before flipped: \(cards[i].displayedImage)")
                 
-                //var imageAfterFlip = cards[i].flipCard()
+                var imageAfterFlip = cards[i].flipCard()
                 
                 print("image after flipped: \(cards[i].displayedImage)")
                 
-                buttons[i].backgroundColor =
-                    self.backColor!
+                buttons[i].backgroundColor = self.backColor!
+                
                 print("Setting color to \(backColor!)")
                 buttons[i].setBackgroundImage(UIImage(named: cards[i].displayedImage), for: .normal)
+                
+                
+                //for testing
                 
                 //buttons[i].backgroundColor = UIColor(named: "red")
                 print("red")
@@ -381,6 +404,8 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
      
         for i in 0..<buttons.count{
             buttons[i].isEnabled = false
+            
+            buttons[i].adjustsImageWhenDisabled = false
         }
         
     }

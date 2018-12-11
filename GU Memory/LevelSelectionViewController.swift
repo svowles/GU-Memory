@@ -24,6 +24,10 @@ class LevelSelectionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        easyButton.layer.cornerRadius = 10
+        mediumButton.layer.cornerRadius = 10
+        hardButton.layer.cornerRadius = 10
     }
     
 
