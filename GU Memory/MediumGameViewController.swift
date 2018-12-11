@@ -75,7 +75,7 @@ class MediumGameViewController: UIViewController {
         
         
         
-        print("background color: \(sender.backgroundColor)")
+        //print("background color: \(sender.backgroundColor)")
         sender.backgroundColor = UIColor(named: "white")
         sender.backgroundImage(for: .normal)
         sender.setBackgroundImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
@@ -255,6 +255,23 @@ class MediumGameViewController: UIViewController {
         buttons = [card0Button, card1Button, card2Button, card3Button, card4Button, card5Button, card6Button, card7Button, card8Button, card9Button, card10Button, card11Button, card12Button, card13Button, card14Button, card15Button]
         
         
+        card0Button.layer.cornerRadius = 10
+        card1Button.layer.cornerRadius = 10
+        card2Button.layer.cornerRadius = 10
+        card3Button.layer.cornerRadius = 10
+        card4Button.layer.cornerRadius = 10
+        card5Button.layer.cornerRadius = 10
+        card6Button.layer.cornerRadius = 10
+        card7Button.layer.cornerRadius = 10
+        card8Button.layer.cornerRadius = 10
+        card9Button.layer.cornerRadius = 10
+        card10Button.layer.cornerRadius = 10
+        card11Button.layer.cornerRadius = 10
+        card12Button.layer.cornerRadius = 10
+        card13Button.layer.cornerRadius = 10
+        card14Button.layer.cornerRadius = 10
+        card15Button.layer.cornerRadius = 10
+        
         //authenticate user in game center
         authenticateCurrentPlayer()
         
@@ -284,7 +301,7 @@ class MediumGameViewController: UIViewController {
             //while we are picking a random number (aka already assigned card) we need to pick a new random number
             while(!validNum){
                 //pick random number between 0 and card count (aka pick random index in the cards array)
-                var randNum = Int.random(in: 0..<cards.count)
+                let randNum = Int.random(in: 0..<cards.count)
                 //if it's a card we havent assigned yet, assign an image to the card and add the randNum to the used number array
                 print(randNum)
                 if !usedRandomNumber.contains(randNum){

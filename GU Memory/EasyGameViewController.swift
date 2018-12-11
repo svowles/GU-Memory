@@ -101,8 +101,8 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
                 print("timer starting")
                 timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: {(timer) -> Void in
                     
-                    var sendImage = self.cards[sender.tag].flipCard()
-                    var prevImage = self.cards[self.prevButton.tag].flipCard()
+                    let sendImage = self.cards[sender.tag].flipCard()
+                    let prevImage = self.cards[self.prevButton.tag].flipCard()
                     
                     print("prevImage: \(prevImage)")
                     print("sendImage: \(sendImage)")
@@ -238,6 +238,14 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
         
         buttons = [card0Button, card1Button, card2Button, card3Button, card4Button, card5Button, card6Button, card7Button]
         
+        card0Button.layer.cornerRadius = 10
+        card1Button.layer.cornerRadius = 10
+        card2Button.layer.cornerRadius = 10
+        card3Button.layer.cornerRadius = 10
+        card4Button.layer.cornerRadius = 10
+        card5Button.layer.cornerRadius = 10
+        card6Button.layer.cornerRadius = 10
+        card7Button.layer.cornerRadius = 10
         
         //authenticate user in game center
         authenticateCurrentPlayer()
@@ -268,7 +276,7 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
             //while we are picking a random number (aka already assigned card) we need to pick a new random number
             while(!validNum){
                 //pick random number between 0 and card count (aka pick random index in the cards array)
-                var randNum = Int.random(in: 0..<cards.count)
+                let randNum = Int.random(in: 0..<cards.count)
                 //if it's a card we havent assigned yet, assign an image to the card and add the randNum to the used number array
                 print(randNum)
                 if !usedRandomNumber.contains(randNum){
@@ -352,7 +360,7 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
                 //flip it back over
                 print("image before flipped: \(cards[i].displayedImage)")
                 
-                var imageAfterFlip = cards[i].flipCard()
+                //var imageAfterFlip = cards[i].flipCard()
                 
                 print("image after flipped: \(cards[i].displayedImage)")
                 

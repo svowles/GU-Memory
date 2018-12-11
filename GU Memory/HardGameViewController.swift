@@ -8,15 +8,14 @@
 
 import UIKit
 import GameKit
-
 class HardGameViewController: UIViewController {
-
+    
     var cards = [Card]()
     
     //names oc the images to be assigned to the cards
-    var images = ["Spike.png", "GULogo.png", "CollegeHall.jpg", "Bulldog.jpeg", "hoop.jpg", "cheer.jpg", "coach.jpg", "campus.jpg", "campus2.jpg", "SpikeMascot.jpg", "church.jpg", "mansion.jpg" ]
+    var images = ["Spike.png", "GULogo.png", "CollegeHall.jpg", "Bulldog.jpeg", "hoop.jpg", "cheer.jpg", "coach.jpg", "campus.jpg", "campus2.jpg", "SpikeMascot.jpg", "church.jpg", "mansion.jpg" , "Students.jpg", "team.jpg" , "goZags.jpg", "player.png"]
     
-
+    
     //to capture the previous button clicked
     @IBOutlet var prevButton: UIButton!
     
@@ -26,7 +25,7 @@ class HardGameViewController: UIViewController {
     
     var numOfAttempts = 0
     
-    var numOfAttemptsLeft = 15
+    var numOfAttemptsLeft = 50
     
     var score = 0
     
@@ -48,6 +47,56 @@ class HardGameViewController: UIViewController {
     
     @IBOutlet var card7Button: UIButton!
     
+    @IBOutlet var card8Button: UIButton!
+    
+    @IBOutlet var card9Button: UIButton!
+    
+    @IBOutlet var card10Button: UIButton!
+    
+    @IBOutlet var card11Button: UIButton!
+    
+    @IBOutlet var card12Button: UIButton!
+    
+    @IBOutlet var card13Button: UIButton!
+    
+    @IBOutlet var card14Button: UIButton!
+    
+    @IBOutlet var card15Button: UIButton!
+    
+    @IBOutlet var card16Button: UIButton!
+    
+    @IBOutlet var card17Button: UIButton!
+    
+    @IBOutlet var card18Button: UIButton!
+    
+    @IBOutlet var card19Button: UIButton!
+    
+    @IBOutlet var card20Button: UIButton!
+    
+    @IBOutlet var card21Button: UIButton!
+    
+    @IBOutlet var card22Button: UIButton!
+    
+    @IBOutlet var card23Button: UIButton!
+    
+    @IBOutlet var card24Button: UIButton!
+    
+    @IBOutlet var card25Button: UIButton!
+    
+    @IBOutlet var card26Button: UIButton!
+    
+    @IBOutlet var card27Button: UIButton!
+    
+    @IBOutlet var card28Button: UIButton!
+    
+    @IBOutlet var card29Button: UIButton!
+    
+    @IBOutlet var card30Button: UIButton!
+    
+    @IBOutlet var card31Button: UIButton!
+    
+    
+    
     var buttons = [UIButton]()
     
     /**
@@ -60,12 +109,12 @@ class HardGameViewController: UIViewController {
         
         
         
-        print("background color: \(sender.backgroundColor)")
+        //print("background color: \(sender.backgroundColor)")
         sender.backgroundColor = UIColor(named: "white")
         sender.backgroundImage(for: .normal)
         sender.setBackgroundImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
         
-        sender.setImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
+        //sender.setImage(UIImage(named: cards[sender.tag].flipCard()), for: .normal)
         sender.isEnabled = false
         //sender.backgroundImage(for: .normal)
         
@@ -99,7 +148,7 @@ class HardGameViewController: UIViewController {
                 self.disableAllButtons()
                 
                 print("timer starting")
-                timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: {(timer) -> Void in
+                timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: {(timer) -> Void in
                     /*
                      var sendImage = self.cards[sender.tag].flipCard()
                      var prevImage = self.cards[self.prevButton.tag].flipCard()
@@ -175,7 +224,7 @@ class HardGameViewController: UIViewController {
             
             self.score += numOfAttemptsLeft * 10
             
-            scoreLabel.text = "Score: \(score)"
+            scoreLabel.text = "Score: \(self.score)"
             
             print("new score: \(score)")
             
@@ -224,7 +273,7 @@ class HardGameViewController: UIViewController {
         super.viewDidLoad()
         
         //create 8 new cards
-        for i in 0..<8 {
+        for i in 0..<32 {
             let c = Card(frontImage: "", backImage: "")
             cards.append(c)
         }
@@ -233,8 +282,40 @@ class HardGameViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        buttons = [card0Button, card1Button, card2Button, card3Button, card4Button, card5Button, card6Button, card7Button]
+        buttons = [card0Button, card1Button, card2Button, card3Button, card4Button, card5Button, card6Button, card7Button, card8Button, card9Button, card10Button, card11Button, card12Button, card13Button, card14Button, card15Button,card16Button, card17Button, card18Button, card19Button, card20Button, card21Button, card22Button, card23Button, card24Button, card25Button, card26Button, card27Button, card28Button, card29Button, card30Button, card31Button]
         
+        card0Button.layer.cornerRadius = 10
+        card1Button.layer.cornerRadius = 10
+        card2Button.layer.cornerRadius = 10
+        card3Button.layer.cornerRadius = 10
+        card4Button.layer.cornerRadius = 10
+        card5Button.layer.cornerRadius = 10
+        card6Button.layer.cornerRadius = 10
+        card7Button.layer.cornerRadius = 10
+        card8Button.layer.cornerRadius = 10
+        card9Button.layer.cornerRadius = 10
+        card10Button.layer.cornerRadius = 10
+        card11Button.layer.cornerRadius = 10
+        card12Button.layer.cornerRadius = 10
+        card13Button.layer.cornerRadius = 10
+        card14Button.layer.cornerRadius = 10
+        card15Button.layer.cornerRadius = 10
+        card16Button.layer.cornerRadius = 10
+        card17Button.layer.cornerRadius = 10
+        card18Button.layer.cornerRadius = 10
+        card19Button.layer.cornerRadius = 10
+        card20Button.layer.cornerRadius = 10
+        card21Button.layer.cornerRadius = 10
+        card22Button.layer.cornerRadius = 10
+        card23Button.layer.cornerRadius = 10
+        card24Button.layer.cornerRadius = 10
+        card25Button.layer.cornerRadius = 10
+        card26Button.layer.cornerRadius = 10
+        card27Button.layer.cornerRadius = 10
+        card28Button.layer.cornerRadius = 10
+        card29Button.layer.cornerRadius = 10
+        card30Button.layer.cornerRadius = 10
+        card31Button.layer.cornerRadius = 10
         
         //authenticate user in game center
         authenticateCurrentPlayer()
@@ -265,7 +346,7 @@ class HardGameViewController: UIViewController {
             //while we are picking a random number (aka already assigned card) we need to pick a new random number
             while(!validNum){
                 //pick random number between 0 and card count (aka pick random index in the cards array)
-                var randNum = Int.random(in: 0..<cards.count)
+                let randNum = Int.random(in: 0..<cards.count)
                 //if it's a card we havent assigned yet, assign an image to the card and add the randNum to the used number array
                 print(randNum)
                 if !usedRandomNumber.contains(randNum){
@@ -331,6 +412,8 @@ class HardGameViewController: UIViewController {
             buttons[i].backgroundImage(for: .normal)
             
             buttons[i].setBackgroundImage(UIImage(named: cards[i].flipCard()), for: .normal)
+            
+            buttons[i].backgroundColor = self.backColor!
         }
         
         
@@ -348,8 +431,7 @@ class HardGameViewController: UIViewController {
                 
                 print("image after flipped: \(cards[i].displayedImage)")
                 
-                buttons[i].backgroundColor =
-                    self.backColor!
+                buttons[i].backgroundColor = self.backColor!
                 buttons[i].setBackgroundImage(UIImage(named: cards[i].displayedImage), for: .normal)
                 
                 //buttons[i].backgroundColor = UIColor(named: "red")
