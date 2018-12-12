@@ -105,6 +105,9 @@ class HardGameViewController: UIViewController {
     @IBAction func cardButtonSelected(sender: UIButton){
         print(cards[sender.tag].backImage)
         
+        
+        UIView.transition(with: sender, duration: 0.3, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
+        
         backColor = sender.backgroundColor
         
         sender.backgroundColor = UIColor(named: "white")
@@ -441,6 +444,8 @@ class HardGameViewController: UIViewController {
             if cards[i].isFlipped && !cards[i].isMatched {
                 //flip it back over
                 print("image before flipped: \(cards[i].displayedImage)")
+                
+                UIView.transition(with: buttons[i], duration: 0.3, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
                 
                 var imageAfterFlip = cards[i].flipCard()
                 

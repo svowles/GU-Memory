@@ -84,6 +84,7 @@
                     <connections>
                         <outlet property="guMemoryLabel" destination="1yg-cp-YPU" id="SWl-me-5Qo"/>
                         <outlet property="playButton" destination="VKj-TU-OVx" id="Pee-1r-NYO"/>
+                        <outlet property="spikeImage" destination="YwL-rS-IHw" id="iXH-L2-BtH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

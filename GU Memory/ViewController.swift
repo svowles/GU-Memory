@@ -21,6 +21,8 @@ class ViewController: UIViewController{
         print("play button selected")
     }
     
+    @IBOutlet var spikeImage: UIImageView!
+    
     @IBAction func achievementsButtonSelected(sender: UIButton){
         print("achievements button selected")
     }
@@ -32,7 +34,7 @@ class ViewController: UIViewController{
         
         playButton.layer.cornerRadius = 10
         
-        guMemoryLabel.layer.cornerRadius = 10 
+        guMemoryLabel.layer.cornerRadius = 10
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
