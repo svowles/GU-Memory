@@ -290,13 +290,14 @@ class MediumGameViewController: UIViewController {
         //authenticate user in game center
         authenticateCurrentPlayer()
         
-        
+        /*
         //show rules
         let alertControllerNotValidInput = UIAlertController(title: "Game Rules", message: "Rules.", preferredStyle: .alert)
         
         alertControllerNotValidInput.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
         
         present(alertControllerNotValidInput, animated: true, completion: nil)
+ */
     }
     
     /**
@@ -394,11 +395,11 @@ class MediumGameViewController: UIViewController {
 
             
             UIView.animate(withDuration: 2.0, animations: {
-                let scaleTransform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+                //let scaleTransform = CGAffineTransform(scaleX: 2.0, y: 2.0)
                 let rotateTransform = CGAffineTransform(rotationAngle: .pi)
                 let translateTransform = CGAffineTransform(translationX:
-                    200, y: 200)
-                let comboTransform = scaleTransform.concatenating(rotateTransform).concatenating(translateTransform)
+                    0, y: 0)
+                let comboTransform = rotateTransform.concatenating(translateTransform)
                 
                 self.buttons[i].transform = comboTransform}) { (_) in
                 
@@ -465,21 +466,7 @@ class MediumGameViewController: UIViewController {
                 
                 UIView.transition(with: buttons[i], duration: 0.3, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
             
-            /*
-                print("image before flipped: \(cards[i].displayedImage)")
-                
-                var imageAfterFlip = cards[i].flipCard()
-                
-                print("image after flipped: \(cards[i].displayedImage)")
-                
-                buttons[i].backgroundColor =
-                    self.backColor!
-                buttons[i].setBackgroundImage(UIImage(named: cards[i].displayedImage), for: .normal)
-                
-                buttons[i].backgroundColor = backColor!
-                print("red")
-                
-            */
+            
             }
             
         }

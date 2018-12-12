@@ -146,22 +146,7 @@ class HardGameViewController: UIViewController {
             
             //add to attempts variable
             if !checkForMatch(cardMatch: checkCards.indexes){
-                /*
-                 
-                 let alertControllerNotValidInput = UIAlertController(title: "Not A Match", message: nil, preferredStyle: .actionSheet)
-                 
-                 alertControllerNotValidInput.addAction(UIAlertAction(title: "Try again.", style: .default, handler: { (action) in
-                 sender.setBackgroundImage(UIImage(named: self.cards[sender.tag].flipCard()), for: .normal)
-                 self.prevButton.setBackgroundImage(UIImage(named: self.cards[self.prevButton.tag].flipCard()), for: .normal)
-                 sender.isEnabled = true
-                 self.prevButton.isEnabled = true
-                 
-                 print("turn 2 cards back over")
-                 
-                 }))
-                 
-                 present(alertControllerNotValidInput, animated: true, completion: nil)
-                 */
+                
                 
                 self.disableAllButtons()
                 
@@ -264,6 +249,8 @@ class HardGameViewController: UIViewController {
             
             
             
+            
+            
             return true
         }
         return false
@@ -338,13 +325,16 @@ class HardGameViewController: UIViewController {
         //authenticate user in game center
         authenticateCurrentPlayer()
         
-        
+        /*
         //show rules
         let alertControllerNotValidInput = UIAlertController(title: "Game Rules", message: "Rules.", preferredStyle: .alert)
         
         alertControllerNotValidInput.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
         
         present(alertControllerNotValidInput, animated: true, completion: nil)
+ 
+        */
+ 
     }
     
     /**
@@ -413,9 +403,34 @@ class HardGameViewController: UIViewController {
     }
     
     func newGame(){
+        turnOverAllCards()
+        
         score = 0
         numOfAttemptsLeft = 15
         setCardImage()
+        
+        
+        
+        for i in 0..<buttons.count{
+            
+            
+            
+            
+            UIView.animate(withDuration: 2.0, animations: {
+                //let scaleTransform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+                let rotateTransform = CGAffineTransform(rotationAngle: .pi)
+                let translateTransform = CGAffineTransform(translationX:
+                    0, y: 0)
+                let comboTransform = rotateTransform.concatenating(translateTransform)
+                        
+                self.buttons[i].transform = comboTransform}) { (_) in
+                    
+                    UIView.animate(withDuration: 2.0, animations: {
+                        self.buttons[i].transform = CGAffineTransform.identity
+                    })
+            }
+        }
+        
         
         for i in 0..<cards.count {
             cards[i].isMatched = false
@@ -435,6 +450,20 @@ class HardGameViewController: UIViewController {
         }
         
         
+    }
+    
+    func turnOverAllCards(){
+        for i in 0..<cards.count {
+            
+            if cards[i].isFlipped == true {
+                print("TURNING OVER")
+                
+                UIView.transition(with: buttons[i], duration: 0.3, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
+                
+                
+            }
+            
+        }
     }
     
     func turnOverAllNonMatches(){

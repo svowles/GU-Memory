@@ -63,6 +63,8 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
         
         backColor = sender.backgroundColor
         
+        sender.layer.borderWidth = 0
+        
         sender.backgroundColor = UIColor(named: "white")
         sender.backgroundImage(for: .normal)
         
@@ -112,27 +114,16 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
             
             //add to attempts variable
             if !checkForMatch(cardMatch: checkCards.indexes){
-                /*
                 
-                let alertControllerNotValidInput = UIAlertController(title: "Not A Match", message: nil, preferredStyle: .actionSheet)
                 
-                alertControllerNotValidInput.addAction(UIAlertAction(title: "Try again.", style: .default, handler: { (action) in
-                    sender.setBackgroundImage(UIImage(named: self.cards[sender.tag].flipCard()), for: .normal)
-                    self.prevButton.setBackgroundImage(UIImage(named: self.cards[self.prevButton.tag].flipCard()), for: .normal)
-                    sender.isEnabled = true
-                    self.prevButton.isEnabled = true
-                    
-                    print("turn 2 cards back over")
-                    
-                }))
-                
-                present(alertControllerNotValidInput, animated: true, completion: nil)
-                */
                 
                 self.disableAllButtons()
                 
                 //print("timer starting")
                 timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: {(timer) -> Void in
+                    
+                    self.buttons[sender.tag].layer.borderWidth = 2
+                    self.buttons[self.prevButton.tag].layer.borderWidth = 2
                     
                     let sendImage = self.cards[sender.tag].flipCard()
                     let prevImage = self.cards[self.prevButton.tag].flipCard()
@@ -280,16 +271,40 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
         card6Button.layer.cornerRadius = 10
         card7Button.layer.cornerRadius = 10
         
+        card0Button.layer.borderWidth = 2
+        card0Button.layer.borderColor = UIColor.black.cgColor
+        
+        card1Button.layer.borderWidth = 2
+        card1Button.layer.borderColor = UIColor.black.cgColor
+        
+        card2Button.layer.borderWidth = 2
+        card2Button.layer.borderColor = UIColor.black.cgColor
+        
+        card3Button.layer.borderWidth = 2
+        card3Button.layer.borderColor = UIColor.black.cgColor
+        
+        card4Button.layer.borderWidth = 2
+        card4Button.layer.borderColor = UIColor.black.cgColor
+        
+        card5Button.layer.borderWidth = 2
+        card5Button.layer.borderColor = UIColor.black.cgColor
+        
+        card6Button.layer.borderWidth = 2
+        card6Button.layer.borderColor = UIColor.black.cgColor
+        
+        card6Button.layer.borderWidth = 2
+        card6Button.layer.borderColor = UIColor.black.cgColor
+        
+        card7Button.layer.borderWidth = 2
+        card7Button.layer.borderColor = UIColor.black.cgColor
+        
+        
         //authenticate user in game center
         authenticateCurrentPlayer()
         
         
         //show rules
-        let alertControllerNotValidInput = UIAlertController(title: "Game Rules", message: "Rules.", preferredStyle: .alert)
-        
-        alertControllerNotValidInput.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
-        
-        present(alertControllerNotValidInput, animated: true, completion: nil)
+    
     }
     
     /**
@@ -392,13 +407,30 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
             var buttonXChange = 0
             
             if buttonXVal == 315{
-                buttonXChange = Int( -1 * (currWidth + (-1 * (315 - 123))))
+                buttonXChange = Int( -1 * (currWidth + (-1 * (315 - 123)))) - 20
             }
             else{
-                buttonXChange = Int(currWidth + buttonXVal)
+                buttonXChange = Int(currWidth + buttonXVal) - 85
             }
             
  
+            var buttonYChange =  0
+            
+            if i < 2 {
+                buttonYChange = Int(1.5 * 110.5)
+            }
+            else if i < 4{
+                buttonYChange = Int(0.5 * 110.5)
+            }
+            else if i < 6{
+                buttonYChange = Int(-0.5 * 110.5)
+            }
+            else {
+                buttonYChange = Int(-1.5 * 110.5)
+            }
+            
+            
+            
             /*var buttonXVal = buttons[i].superview!.frame.maxX//buttons[i].frame.origin.x
             var buttonYVal = buttons[i].superview!.frame.maxY// buttons[i].superview!.frame.origin.x
             */
@@ -410,7 +442,7 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
                 //let scaleTransform = CGAffineTransform(scaleX: 2.0, y: 2.0)
                 let rotateTransform = CGAffineTransform(rotationAngle: .pi)
                 let translateTransform = CGAffineTransform(translationX:
-                    CGFloat(buttonXChange), y: 0)
+                    CGFloat(buttonXChange), y: CGFloat(buttonYChange))
                 //let comboTransform = scaleTransform.concatenating(rotateTransform).concatenating(translateTransform)
                 
                 let comboTransform = rotateTransform.concatenating(translateTransform)
@@ -453,6 +485,8 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
             
             //if the card has been flipped over but does not have a match
             if cards[i].isFlipped && !cards[i].isMatched {
+                
+                buttons[i].layer.borderWidth = 2
                 
                 UIView.transition(with: buttons[i], duration: 0.3, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
                 
@@ -505,23 +539,11 @@ class EasyGameViewController: UIViewController{//, GKGameCenterControllerDelegat
             if cards[i].isFlipped == true {
                 print("TURNING OVER")
                 
+                buttons[i].layer.borderWidth = 2
+                
                 UIView.transition(with: buttons[i], duration: 0.3, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
                 
-                /*
-                 print("image before flipped: \(cards[i].displayedImage)")
-                 
-                 var imageAfterFlip = cards[i].flipCard()
-                 
-                 print("image after flipped: \(cards[i].displayedImage)")
-                 
-                 buttons[i].backgroundColor =
-                 self.backColor!
-                 buttons[i].setBackgroundImage(UIImage(named: cards[i].displayedImage), for: .normal)
-                 
-                 buttons[i].backgroundColor = backColor!
-                 print("red")
-                 
-                 */
+               
             }
             
         }

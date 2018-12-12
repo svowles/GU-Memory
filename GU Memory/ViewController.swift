@@ -35,6 +35,36 @@ class ViewController: UIViewController{
         playButton.layer.cornerRadius = 10
         
         guMemoryLabel.layer.cornerRadius = 10
+    
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            let scaleTransform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            
+            self.playButton.transform = scaleTransform})
+            { (_) in
+                
+                UIView.animate(withDuration: 1.0, animations: {
+                    self.playButton.transform = CGAffineTransform.identity
+                })
+            }
+        
+        
+        UIView.animate(withDuration: 2.0, animations:{
+            let scaleTransform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+            let rotateTransform = CGAffineTransform(rotationAngle: .pi)
+            let translateTransform = CGAffineTransform(translationX:
+                0, y: 0)
+            
+            
+            let comboTransform = rotateTransform.concatenating(translateTransform)
+                            
+            self.spikeImage.transform = comboTransform}) { (_) in
+                
+            UIView.animate(withDuration: 2.0, animations: {
+                self.spikeImage.transform = CGAffineTransform.identity
+            })
+                
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
